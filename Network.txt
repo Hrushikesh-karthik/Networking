@@ -1,0 +1,7 @@
+When 2 or more devices are connected to each other, it is called a Network
+Clients and servers are roles, not machines
+Client requests and the server responds
+A single machine can act as both the client and server
+python3 -m http.server 9000 & : This command helps create a server and it runs in background
+Generally when a server is running, it is not possible to run commands on it but using '&' at the end of the command helps you do that
+curl http://example.com is how you send a request to a server
