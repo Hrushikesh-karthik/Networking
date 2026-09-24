@@ -2,5 +2,5 @@ Netmask
 In an IP address, there are network bits and host bits
 Host bit represents the number
 a netmask 255.255.255.0 says that first 3 parts belong to same network and last part is for the hosts
-For 192.168.1.42 with mask 255.255.255.0, the network is 192.168.1.0
-For 10.10.25.18 with mask 255.255.0.0 the network is 10.10.0.0
+For IP 192.168.1.42 with mask 255.255.255.0, the network is 192.168.1.0
+For IP 10.10.25.18 with mask 255.255.0.0 the network is 10.10.0.0
