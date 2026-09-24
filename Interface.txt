@@ -12,3 +12,6 @@ ip link add name test0 type dummy -> this creates a dummy interface
 ip addr add 10.5.5.1/24 dev test0 -> If any packet is sent to 10.5.5.1, it belongs to interface test0.
 ip link set test0 up -> starts the interface
 ping -c 2 10.5.5.1 -> tests if working or not
+
+if you want to add another IP address to the existing interface, run ip addr add 10.5.5.2/24 dev test0
+this will not override the existing one but instead it adds as a secondary address while keeping the first one in place
