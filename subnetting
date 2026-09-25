@@ -4,3 +4,17 @@ Host bit represents the number
 a netmask 255.255.255.0 says that first 3 parts belong to same network and last part is for the hosts
 For IP 192.168.1.42 with mask 255.255.255.0, the network is 192.168.1.0
 For IP 10.10.25.18 with mask 255.255.0.0 the network is 10.10.0.0
+
+CIDR is a modern solution to the network mask
+It replaces the 255.255.255.255 with an equivalent number like /32
+
+/8 = mask 255.0.0.0. First number is the network. One /8 network spans over 16 million addresses.
+/16 = mask 255.255.0.0. First two numbers are the network. 65,536 addresses.
+/24 = mask 255.255.255.0. First three numbers are the network. 256 addresses.
+To get the number of hosts: eg, /24: 32-24 = 8 -> 2^8=256 
+254 hosts and 2 reserved addresses 1. 
+
+Same network or not
+Destination 192.168.1.77: network part 192.168.1. Same. Local, deliver directly.
+Destination 192.168.2.77: network part 192.168.2. Different. Remote, send to the gateway.
+Destination 8.8.8.8: network part 8.8.8. Different. Remote, send to the gateway.
